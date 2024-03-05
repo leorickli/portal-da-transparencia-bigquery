@@ -2,7 +2,7 @@
 
 *Google Cloud Pub/Sub is a messaging service provided by Google Cloud Platform (GCP) that enables asynchronous communication between different components of a distributed system.*
 
-### Choose 5 fundamental concepts of GCP Pub/Sub and describe them
+### 1. Choose 5 fundamental concepts of GCP Pub/Sub and describe them
 
 1. *Topic:*
   - A topic is a named resource to which messages are sent by publishers and from which messages are pulled by subscribers.
@@ -25,11 +25,11 @@
   - Push Delivery: In push mode, Pub/Sub delivers messages directly to an endpoint (e.g., a webhook) specified by the subscriber. This requires the subscriber to expose a public endpoint.
   - Pull Delivery: In pull mode, subscribers explicitly request messages from Pub/Sub at their own pace. The subscriber controls when it pulls messages and acknowledges them.
 
-### Describe the architecture of GCP Pub/Sub
+### 2. Describe the architecture of GCP Pub/Sub
 
 Google Cloud Pub/Sub has a distributed architecture designed for reliable message delivery. Publishers send messages to topics, which are logical channels. The Pub/Sub service manages message storage, retrieval, and distribution. Subscribers, connected to topics through subscriptions, consume messages. Subscribers use pull or push mechanisms for retrieval and acknowledge successful message processing. Messages, the units of data, have payloads and optional metadata. This architecture ensures efficient and scalable asynchronous communication between components in a distributed system.
 
-### Present examples of Pub/Sub utilization on SQL and noSQL databases
+### 3. Present examples of Pub/Sub utilization on SQL and noSQL databases
 
 *Pub/Sub Utilization with SQL Database (e.g., Cloud SQL):*
 
@@ -43,7 +43,7 @@ Now, let's consider a collaborative document editing application using a NoSQL d
 
 The integration involves setting up a NoSQL database to store the collaborative document. For real-time updates, you can create a Pub/Sub topic, say "document_updates." A service acts as a publisher, and whenever a user makes changes to the document, it publishes a message to this topic. On the application side, a subscriber service is implemented to listen to the "document_updates" topic. As messages are received, the collaborative document is updated in real-time. This ensures that all users involved in the collaboration see live changes as they occur, fostering a seamless and responsive collaborative editing experience.
 
-### Describe the best advantages of using of GCP Pub/Sub
+### 4. Describe the best advantages of using of GCP Pub/Sub
 
 1. *Asynchronous Communication:*
 
@@ -85,11 +85,11 @@ Topics allow for flexible message routing, enabling publishers to categorize mes
 
 Google Cloud Pub/Sub offers a pay-as-you-go pricing model, allowing you to pay for the resources you consume. It eliminates the need for upfront investments in infrastructure and provides cost efficiency, especially for variable workloads.
 
-### What is a data pipeline?
+### 5. What is a data pipeline?
 
 A data pipeline is a sequence of processes that collect, transform, and move data from one or multiple sources to a destination, typically for analysis, storage, or further processing. It involves the extraction of raw data, its transformation into a usable format, and the loading of the processed data into a target system. Data pipelines play a crucial role in automating and streamlining the flow of information within an organization, enabling efficient data management, analysis, and decision-making.
 
-### Show two examples of data pipelines being applied in the day-to-day life
+### 6. Show two examples of data pipelines being applied in the day-to-day life
 
 *Social Media Feeds:*
 
