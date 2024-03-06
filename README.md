@@ -1,5 +1,7 @@
 # portal-da-transparencia-kafka
 
+![Screenshot 2024-03-05 213908](https://github.com/leorickli/portal-da-transparencia-kafka/assets/106999054/4745b7d7-b864-40c4-855e-14df141507db)
+
 *Google Cloud Pub/Sub is a messaging service provided by Google Cloud Platform (GCP) that enables asynchronous communication between different components of a distributed system.*
 
 ### 1. Choose 5 fundamental concepts of GCP Pub/Sub and describe them
@@ -98,3 +100,9 @@ When you scroll through your social media feed, a data pipeline is at work. The 
 *Online Shopping Recommendations:*
 
 When you shop online and receive product recommendations, a data pipeline is behind the scenes. This pipeline collects data on your browsing history, purchase behavior, and demographic information. The collected data is then processed to generate personalized recommendations using algorithms. The end result is a curated list of products that align with your preferences and past interactions, enhancing your shopping experience and potentially influencing your purchasing decisions.
+
+### 7. Show the pipeline
+
+#### First steps
+
+
