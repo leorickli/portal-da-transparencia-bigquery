@@ -1,6 +1,6 @@
 # portal-da-transparencia-kafka
 
-![Screenshot 2024-03-05 213908](https://github.com/leorickli/portal-da-transparencia-kafka/assets/106999054/4745b7d7-b864-40c4-855e-14df141507db)
+<img width="553" alt="Screenshot 2024-03-09 at 18 28 53" src="https://github.com/leorickli/portal-da-transparencia-kafka/assets/106999054/a8cd6a20-ed53-48f2-a88e-2a92a3a7a444">
 
 *Google Cloud Pub/Sub is a messaging service provided by Google Cloud Platform (GCP) that enables asynchronous communication between different components of a distributed system.*
 
