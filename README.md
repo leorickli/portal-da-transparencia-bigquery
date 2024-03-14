@@ -141,7 +141,7 @@ google-cloud-pubsub==2.20.1
 python-dateutil==2.9.0
 '''
 
-Now we can deploy our function.
+Now we can deploy our function. After it's been deployed, we can use GCP's CLI to start the function by running the CLI test command given in the "Testing" section.
 
 #### Processing
 
@@ -151,7 +151,7 @@ Dataflow is by far the most complicated part of this project. Before we start cr
 
 Be patient when deploying to Dataflow, the table might take longer to create in BigQuery when compared to your local testing.
 
----INSERT DATAFLOW DAG HERE
+<img width="953" alt="Screenshot 2024-03-13 at 23 30 31" src="https://github.com/leorickli/portal-da-transparencia-streaming/assets/106999054/ba5d265a-fce4-4d02-89f4-92951708f3a0">
 
 #### Storage and Serving
 
