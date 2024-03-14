@@ -41,7 +41,6 @@ table_schema = {
   ]
 }
 
-
 def select_fields(element):
     return {
         'id': element['id'],
