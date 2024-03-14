@@ -1,0 +1,68 @@
+[
+    {
+      "name": "id",
+      "type": "INTEGER",
+      "mode": "Required",
+      "description": "Primary key: The unique ID of each register."
+    },
+    {
+      "name": "dateReference",
+      "type": "DATE",
+      "mode": "Nullable",
+      "description": "The monthly date for each parcel of the program."
+    },
+    {
+      "name": "stateCode",
+      "type": "INTEGER",
+      "mode": "Nullable",
+      "description": "The unique code that is given to the state."
+    },
+    {
+      "name": "stateName",
+      "type": "STRING",
+      "mode": "Nullable",
+      "description": "The name of the state."
+    },
+    {
+      "name": "cityCode",
+      "type": "INTEGER",
+      "mode": "Nullable",
+      "description": "The unique code that is given to the city."
+    },
+    {
+      "name": "cityName",
+      "type": "STRING",
+      "mode": "Nullable",
+      "description": "The name of the city."
+    },
+    {
+      "name": "programType",
+      "type": "STRING",
+      "mode": "Nullable",
+      "description": "The name of the program: Auxílio Brasil, Auxílio Emergencial, or Bolsa Família."
+    },
+    {
+      "name": "cost",
+      "type": "FLOAT",
+      "mode": "Nullable",
+      "description": "The monthly cost of each program."
+    },
+    {
+      "name": "costMargin",
+      "type": "STRING",
+      "mode": "Nullable",
+      "description": "A business rule applied to the cost, showing levels of acceptance between cost margins."
+    },
+    {
+      "name": "numberBeneficiaries",
+      "type": "INTEGER",
+      "mode": "Nullable",
+      "description": "The number of people benefited from the program."
+    },
+    {
+      "name": "numberBeneficiariesMargin",
+      "type": "STRING",
+      "mode": "Nullable",
+      "description": "A business rule applied to the number of beneficiaries, showing levels of acceptance between number margins."
+    }
+  ]
