@@ -14,6 +14,7 @@ The following GCP resources were used:
 - **Pub/Sub:** The main representative of the streaming class in GCP. I could say that pretty much every streaming pipeline will use Pub/Sub as their main motor for real-time messaging solutions on the cloud.
 - **Dataflow:** This is the best tool to use when streaming data with Pub/Sub on GCP. Used to transform the data received from Pub/Sub and then writing to BigQuery.
 - **BigQuery:** The flagship of GCP; used mainly for warehousing (it can now be a data lake) and anlytics. For this project, it is used for storing the transformed data from Dataflow in tabular format and some analytics.
+- **Looker Studio:** Used for creating dashboards for our data.
 
 ### 1. Choose 5 fundamental concepts of GCP Pub/Sub and describe them
 
