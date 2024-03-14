@@ -159,6 +159,7 @@ Be patient when deploying to Dataflow, the table might take longer to create in 
 
 Now that the data has been inserted into BigQuery, we can use Looker to build some dashboards on top of it.
 
+<img width="1147" alt="Screenshot 2024-03-14 at 00 08 39" src="https://github.com/leorickli/portal-da-transparencia-streaming/assets/106999054/74234404-e1c7-45df-b8bd-3907c7d2af9e">
 ![image](https://github.com/leorickli/portal-da-transparencia-streaming/assets/106999054/01c22ec1-1bf4-405b-8b3d-037a87dfa5f3)
 
 #### Conclusion
