@@ -1,6 +1,6 @@
 # portal-da-transparencia-streaming
 
-<img width="553" alt="Screenshot 2024-03-09 at 18 28 53" src="https://github.com/leorickli/portal-da-transparencia-kafka/assets/106999054/a8cd6a20-ed53-48f2-a88e-2a92a3a7a444">
+<img width="706" alt="Screenshot 2024-03-13 at 23 47 15" src="https://github.com/leorickli/portal-da-transparencia-streaming/assets/106999054/9756a9b2-5f8b-485f-8fbd-0af2ace8867f">
 
 This project explores the Google Cloud Platform's resources to create a streaming pipeline to process real-time data from the Portal da Transparência API. Actually, there is no real-time data provided by this API, we have to generate the real-time data through a Python script.
 
