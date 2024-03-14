@@ -72,7 +72,7 @@ def api_request(publisher, topic_path, headers, ibge_code, start_datetime, end_d
               data_str = json.dumps(item, ensure_ascii=False)
               publisher.publish(topic_path, data_str.encode("utf-8"))
               print("Published message.")
-              time.sleep(10)
+              time.sleep(5)
       else:
           print(f"Error for {year_month}: {response.status_code}, {response.text}")
 
