@@ -136,10 +136,10 @@ When we send this script to Cloud Fucntions, it's advised to comment out the "os
 
 These are the libraries required in the requirements.txt file:
 
-'''
+```
 google-cloud-pubsub==2.20.1
 python-dateutil==2.9.0
-'''
+```
 
 Now we can deploy our function. After it's been deployed, we can use GCP's CLI to start the function by running the CLI test command given in the "Testing" section.
 
@@ -158,5 +158,7 @@ Be patient when deploying to Dataflow, the table might take longer to create in 
 Now that the data has been inserted into BigQuery, we can use Looker to build some dashboards on top of it.
 
 ![image](https://github.com/leorickli/portal-da-transparencia-streaming/assets/106999054/01c22ec1-1bf4-405b-8b3d-037a87dfa5f3)
+
+#### Conclusion
 
 
