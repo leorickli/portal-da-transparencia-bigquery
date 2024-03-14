@@ -1,4 +1,4 @@
-# portal-da-transparencia-kafka
+# portal-da-transparencia-streaming
 
 <img width="553" alt="Screenshot 2024-03-09 at 18 28 53" src="https://github.com/leorickli/portal-da-transparencia-kafka/assets/106999054/a8cd6a20-ed53-48f2-a88e-2a92a3a7a444">
 
@@ -122,13 +122,38 @@ Create a new project so it's easier to shut down all the services used when ther
 
 After you've created your service account, you can create a JSON key that will be downloaded into your local machine. I like to rename this key into a simpler name and store it in the folder that I'm working with my project, so we don't have to declare the key's absolute path inside our Python scripts, at least on Linux based machines.
 
-I like to use the Compute Engine default service account as my main service account for my cloud resources. Assign the "BigQuery Data Editor" and the "Pub/Sub Editor" roles on it.
+Create a GCS bucket for your project and add the folders "temp" (for the temporary files that Dataflow will create) and "template" (for when you deploy your [beam_pipeline](https://github.com/leorickli/portal-da-transparencia-streaming/blob/main/beam_pipeline.py) in the later steps of this project).
 
-Finally, we have to
+Finally, I like to use the Compute Engine default service account as my main service account for my cloud resources. Assign the "BigQuery Data Editor" and the "Pub/Sub Editor" roles on it.
 
 #### Ingestion
 
-When you request data from an API, it usually comes in JSON format. The [data_generator](https://github.com/leorickli/portal-da-transparencia-kafka/blob/main/data_generator.py) script was created so we can request from the API
+First, we have to create an account on [Portal da Transparência's website](https://portaldatransparencia.gov.br/api-de-dados/cadastrar-email) so it give us a key for accessing the API data. This key will be inserted on the Python script. When you request data from an API, it usually comes in JSON format (you can checkout a [sample_data](https://github.com/leorickli/portal-da-transparencia-streaming/blob/main/sample_data.json) in its raw form). The [data_generator](https://github.com/leorickli/portal-da-transparencia-kafka/blob/main/data_generator.py) script was created so we can get data from the Auxílio Brasil's get request of the API and then publish it to a Pub/Sub topic. This script also simulates a streaming process by sending an object of the json file for a given amount of time that you can set; in this case, a message (a JSON object) will be publish every five seconds to a Pub/Sub topic.
+
+When we send this script to Cloud Fucntions, it's advised to comment out the "os.environ" section in the script and add a "def main(request):" along with a return statement on it. When creating the function on Cloud Functions, don't forget to insert "main" as the entry point like in the image below:
 
 ![image](https://github.com/leorickli/portal-da-transparencia-kafka/assets/106999054/0889fe4a-4447-4922-9bde-2b0ce995fb5a)
+
+These are the libraries required in the requirements.txt file:
+
+'''
+google-cloud-pubsub==2.20.1
+python-dateutil==2.9.0
+'''
+
+Now we can deploy our function.
+
+#### Processing
+
+Pub/Sub will receive these messages and store it in a topic. When you create a topic, it's nice to create a [raw_data_schema](https://github.com/leorickli/portal-da-transparencia-streaming/blob/main/raw_data_schema.json) for the data arriving to that topic, this way you will guarantee order in the data that's being publish to our topic. Don't forget to also create the subscription for the topic.
+
+Dataflow is by far the most complicated part of this project. Before we start creating the Beam pipeline, we have to first create a dataset and a table inside BigQuery, don't worry about defining a schema for the table, this will be declared inside the Beam script. The [beam_pipeline](https://github.com/leorickli/portal-da-transparencia-streaming/blob/main/beam_pipeline.py) script has a toggle (comment out) so you can test your pipeline on your machine or deploy it to the cloud, this works because one has the DataflowRunner declared and the other does not. With that script, we become a subscriber to our Pub/Sub topic, transform the JSON object by adding fields and changing the its names and then writing it to BigQuery in tabular format. Make sure to test it first on your local machine before deploying it on the cloud, this one can be quite expensive if you leave it testing indefinitely on Dataflow. Once the script has been deployed and it's showing on the "template" folder inside your GCS bucket, you can create your Dataflow job.
+
+Be patient when deploying to Dataflow, the table might take longer to create in BigQuery when compared to your local testing.
+
+---INSERT DATAFLOW DAG HERE
+
+#### Storage and Serving
+
+Now that the data has been inserted into BigQuery, we can start making some analysis on it.
 
