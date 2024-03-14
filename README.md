@@ -122,11 +122,13 @@ Create a new project so it's easier to shut down all the services used when ther
 
 After you've created your service account, you can create a JSON key that will be downloaded into your local machine. I like to rename this key into a simpler name and store it in the folder that I'm working with my project, so we don't have to declare the key's absolute path inside our Python scripts, at least on Linux based machines.
 
-Finally, I like to use the Compute Engine default service account as my main service account for my cloud resources. Assign the "BigQuery Data Editor" and the "Pub/Sub Editor" roles on it.
+I like to use the Compute Engine default service account as my main service account for my cloud resources. Assign the "BigQuery Data Editor" and the "Pub/Sub Editor" roles on it.
+
+Finally, we have to
 
 #### Ingestion
 
-When you request data from an API, it usually comes in JSON format. This script was created 
+When you request data from an API, it usually comes in JSON format. The [data_generator](https://github.com/leorickli/portal-da-transparencia-kafka/blob/main/data_generator.py) script was created so we can request from the API
 
 ![image](https://github.com/leorickli/portal-da-transparencia-kafka/assets/106999054/0889fe4a-4447-4922-9bde-2b0ce995fb5a)
 
