@@ -13,8 +13,7 @@ from dateutil.relativedelta import relativedelta
 import random
 
 # TOGGLE THAT ON FOR EXECUTING ON PREMISES
-# service_account_key = 'serviceAccount.json'
-# os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = service_account_key
+# os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = 'serviceAccount.json'
 
 city_code = [
 4100103, 4100202, 4100301, 4100400, 4100459, 4100509, 4100608, 4100707, 4100806, 4100905, 4101002, 4101051, 4101101, 4101150, 4101200, 4101309, 4101408, 
@@ -48,7 +47,7 @@ topic_id = "welfare-programs-topic"
 publisher = pubsub_v1.PublisherClient()
 topic_path = publisher.topic_path(project_id, topic_id)
 
-key = "34ed1e6231d354e35948e24139e48ee9"
+key = "insert_your_key_here"
 headers = {'accept': '*/*', 'chave-api-dados': key}
 ibge_code = random.choice(city_code)
 
