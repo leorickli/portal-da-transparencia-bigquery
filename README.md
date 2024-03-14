@@ -114,6 +114,8 @@ When you shop online and receive product recommendations, a data pipeline is beh
 
 ### 7. Show the pipeline
 
+Business question: Given the monthly cost for each city, are we having a higher cost in average for the given city?
+
 #### First steps
 
 Create a new project so it's easier to shut down all the services used when there is no more need. The second step we take is to create a service account for our local machine so it has access to GCP's resources. To do that, we go to IAM & Admin in the Service Accounts section and create a new one. One important steps is defining a role for this service account; In this case we will use the Owner role like in the image below. Be aware that in the cloud, we like to use the least-privilege principle and this Owner role will definitely be unaligned with this principle.
@@ -161,4 +163,4 @@ Now that the data has been inserted into BigQuery, we can use Looker to build so
 
 #### Conclusion
 
-
+The graph answers the business question properly. Indeed there is a high cost in this welfare program throughout the months.
