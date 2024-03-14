@@ -1,0 +1,89 @@
+{
+    "type": "record",
+    "name": "Avro",
+    "fields": [
+      {
+        "name": "id",
+        "type": "int"
+      },
+      {
+        "name": "dataReferencia",
+        "type": "string"
+      },
+      {
+        "name": "municipio",
+        "type": {
+          "type": "record",
+          "name": "MunicipioRecord",
+          "fields": [
+            {
+              "name": "codigoIBGE",
+              "type": "string"
+            },
+            {
+              "name": "nomeIBGE",
+              "type": "string"
+            },
+            {
+              "name": "codigoRegiao",
+              "type": "string"
+            },
+            {
+              "name": "nomeRegiao",
+              "type": "string"
+            },
+            {
+              "name": "pais",
+              "type": "string"
+            },
+            {
+              "name": "uf",
+              "type": {
+                "type": "record",
+                "name": "UFRecord",
+                "fields": [
+                  {
+                    "name": "sigla",
+                    "type": "string"
+                  },
+                  {
+                    "name": "nome",
+                    "type": "string"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "tipo",
+        "type": {
+          "type": "record",
+          "name": "TipoRecord",
+          "fields": [
+            {
+              "name": "id",
+              "type": "int"
+            },
+            {
+              "name": "descricao",
+              "type": "string"
+            },
+            {
+              "name": "descricaoDetalhada",
+              "type": "string"
+            }
+          ]
+        }
+      },
+      {
+        "name": "valor",
+        "type": "double"
+      },
+      {
+        "name": "quantidadeBeneficiados",
+        "type": "int"
+      }
+    ]
+  }
