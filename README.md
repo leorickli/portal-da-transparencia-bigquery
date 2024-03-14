@@ -149,7 +149,9 @@ Now we can deploy our function. After it's been deployed, we can use GCP's CLI t
 
 Pub/Sub will receive these messages and store it in a topic. When you create a topic, it's nice to create a [raw_data_schema](https://github.com/leorickli/portal-da-transparencia-streaming/blob/main/raw_data_schema.json) for the data arriving to that topic, this way you will guarantee order in the data that's being publish to our topic. Don't forget to also create the subscription for the topic.
 
-Dataflow is by far the most complicated part of this project. Before we start creating the Beam pipeline, we have to first create a dataset and a table inside BigQuery, don't worry about defining a schema for the table, this will be declared inside the Beam script. The [beam_pipeline](https://github.com/leorickli/portal-da-transparencia-streaming/blob/main/beam_pipeline.py) script has a toggle (comment out) so you can test your pipeline on your machine or deploy it to the cloud, this works because one has the DataflowRunner declared and the other does not. With that script, we become a subscriber to our Pub/Sub topic, transform the JSON object by adding fields and changing the its names and then writing it to BigQuery in tabular format. Make sure to test it first on your local machine before deploying it on the cloud, this one can be quite expensive if you leave it testing indefinitely on Dataflow. Once the script has been deployed and it's showing on the "template" folder inside your GCS bucket, you can create your Dataflow job.
+Dataflow is by far the most complicated part of this project. Before we start creating the Beam pipeline, we have to first create a dataset inside BigQuery, don't worry about defining the table and a schema in the dataset, this will be created inside the Beam script. If you still want to create the table and schema just for quality assertions, here is the [bigquery_schema](https://github.com/leorickli/portal-da-transparencia-streaming/blob/main/bigquery_schema.json) that you can insert as text inside when creating the table.
+
+The [beam_pipeline](https://github.com/leorickli/portal-da-transparencia-streaming/blob/main/beam_pipeline.py) script has a toggle (comment out) so you can test your pipeline on your machine or deploy it to the cloud, this works because one has the DataflowRunner declared and the other does not. With that script, we become a subscriber to our Pub/Sub topic, transform the JSON object by adding fields and changing the its names and then writing it to BigQuery in tabular format. Make sure to test it first on your local machine before deploying it on the cloud, this one can be quite expensive if you leave it testing indefinitely on Dataflow. Once the script has been deployed and it's showing on the "template" folder inside your GCS bucket, you can create your Dataflow job.
 
 Be patient when deploying to Dataflow, the table might take longer to create in BigQuery when compared to your local testing.
 
@@ -160,7 +162,7 @@ Be patient when deploying to Dataflow, the table might take longer to create in 
 Now that the data has been inserted into BigQuery, we can use Looker to build some dashboards on top of it.
 
 <img width="1147" alt="Screenshot 2024-03-14 at 00 08 39" src="https://github.com/leorickli/portal-da-transparencia-streaming/assets/106999054/74234404-e1c7-45df-b8bd-3907c7d2af9e">
-![image](https://github.com/leorickli/portal-da-transparencia-streaming/assets/106999054/01c22ec1-1bf4-405b-8b3d-037a87dfa5f3)
+
 
 #### Conclusion
 
