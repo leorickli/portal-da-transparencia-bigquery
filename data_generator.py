@@ -13,8 +13,8 @@ from dateutil.relativedelta import relativedelta
 import random
 
 # TOGGLE THAT ON FOR EXECUTING ON PREMISES
-service_account_key = 'serviceAccount.json'
-os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = service_account_key
+# service_account_key = 'serviceAccount.json'
+# os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = service_account_key
 
 city_code = [
 4100103, 4100202, 4100301, 4100400, 4100459, 4100509, 4100608, 4100707, 4100806, 4100905, 4101002, 4101051, 4101101, 4101150, 4101200, 4101309, 4101408, 
