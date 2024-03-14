@@ -1,0 +1,354 @@
+[
+    {
+      "id": 25301145,
+      "dataReferencia": "2021-11-01",
+      "municipio": {
+        "codigoIBGE": "4114401",
+        "nomeIBGE": "MANGUEIRINHA",
+        "codigoRegiao": "4",
+        "nomeRegiao": "SUL",
+        "pais": "BRASIL",
+        "uf": {
+          "sigla": "PR",
+          "nome": "PARANÁ"
+        }
+      },
+      "tipo": {
+        "id": 7,
+        "descricao": "Auxílio Brasil",
+        "descricaoDetalhada": "Auxílio Brasil"
+      },
+      "valor": 197918.0,
+      "quantidadeBeneficiados": 1015
+    },
+    {
+      "id": 12901055,
+      "dataReferencia": "2021-12-01",
+      "municipio": {
+        "codigoIBGE": "4114401",
+        "nomeIBGE": "MANGUEIRINHA",
+        "codigoRegiao": "4",
+        "nomeRegiao": "SUL",
+        "pais": "BRASIL",
+        "uf": {
+          "sigla": "PR",
+          "nome": "PARANÁ"
+        }
+      },
+      "tipo": {
+        "id": 7,
+        "descricao": "Auxílio Brasil",
+        "descricaoDetalhada": "Auxílio Brasil"
+      },
+      "valor": 192300.0,
+      "quantidadeBeneficiados": 988
+    },
+    {
+      "id": 26701177,
+      "dataReferencia": "2022-01-01",
+      "municipio": {
+        "codigoIBGE": "4114401",
+        "nomeIBGE": "MANGUEIRINHA",
+        "codigoRegiao": "4",
+        "nomeRegiao": "SUL",
+        "pais": "BRASIL",
+        "uf": {
+          "sigla": "PR",
+          "nome": "PARANÁ"
+        }
+      },
+      "tipo": {
+        "id": 7,
+        "descricao": "Auxílio Brasil",
+        "descricaoDetalhada": "Auxílio Brasil"
+      },
+      "valor": 212744.0,
+      "quantidadeBeneficiados": 1119
+    },
+    {
+      "id": 13201241,
+      "dataReferencia": "2022-02-01",
+      "municipio": {
+        "codigoIBGE": "4114401",
+        "nomeIBGE": "MANGUEIRINHA",
+        "codigoRegiao": "4",
+        "nomeRegiao": "SUL",
+        "pais": "BRASIL",
+        "uf": {
+          "sigla": "PR",
+          "nome": "PARANÁ"
+        }
+      },
+      "tipo": {
+        "id": 7,
+        "descricao": "Auxílio Brasil",
+        "descricaoDetalhada": "Auxílio Brasil"
+      },
+      "valor": 217317.0,
+      "quantidadeBeneficiados": 1123
+    },
+    {
+      "id": 13201261,
+      "dataReferencia": "2022-03-01",
+      "municipio": {
+        "codigoIBGE": "4114401",
+        "nomeIBGE": "MANGUEIRINHA",
+        "codigoRegiao": "4",
+        "nomeRegiao": "SUL",
+        "pais": "BRASIL",
+        "uf": {
+          "sigla": "PR",
+          "nome": "PARANÁ"
+        }
+      },
+      "tipo": {
+        "id": 7,
+        "descricao": "Auxílio Brasil",
+        "descricaoDetalhada": "Auxílio Brasil"
+      },
+      "valor": 206884.0,
+      "quantidadeBeneficiados": 1055
+    },
+    {
+      "id": 12701198,
+      "dataReferencia": "2022-04-01",
+      "municipio": {
+        "codigoIBGE": "4114401",
+        "nomeIBGE": "MANGUEIRINHA",
+        "codigoRegiao": "4",
+        "nomeRegiao": "SUL",
+        "pais": "BRASIL",
+        "uf": {
+          "sigla": "PR",
+          "nome": "PARANÁ"
+        }
+      },
+      "tipo": {
+        "id": 7,
+        "descricao": "Auxílio Brasil",
+        "descricaoDetalhada": "Auxílio Brasil"
+      },
+      "valor": 202457.0,
+      "quantidadeBeneficiados": 1027
+    },
+    {
+      "id": 9101330,
+      "dataReferencia": "2022-05-01",
+      "municipio": {
+        "codigoIBGE": "4114401",
+        "nomeIBGE": "MANGUEIRINHA",
+        "codigoRegiao": "4",
+        "nomeRegiao": "SUL",
+        "pais": "BRASIL",
+        "uf": {
+          "sigla": "PR",
+          "nome": "PARANÁ"
+        }
+      },
+      "tipo": {
+        "id": 7,
+        "descricao": "Auxílio Brasil",
+        "descricaoDetalhada": "Auxílio Brasil"
+      },
+      "valor": 203325.0,
+      "quantidadeBeneficiados": 1020
+    },
+    {
+      "id": 5701381,
+      "dataReferencia": "2022-06-01",
+      "municipio": {
+        "codigoIBGE": "4114401",
+        "nomeIBGE": "MANGUEIRINHA",
+        "codigoRegiao": "4",
+        "nomeRegiao": "SUL",
+        "pais": "BRASIL",
+        "uf": {
+          "sigla": "PR",
+          "nome": "PARANÁ"
+        }
+      },
+      "tipo": {
+        "id": 7,
+        "descricao": "Auxílio Brasil",
+        "descricaoDetalhada": "Auxílio Brasil"
+      },
+      "valor": 201204.0,
+      "quantidadeBeneficiados": 1028
+    },
+    {
+      "id": 24901383,
+      "dataReferencia": "2022-07-01",
+      "municipio": {
+        "codigoIBGE": "4114401",
+        "nomeIBGE": "MANGUEIRINHA",
+        "codigoRegiao": "4",
+        "nomeRegiao": "SUL",
+        "pais": "BRASIL",
+        "uf": {
+          "sigla": "PR",
+          "nome": "PARANÁ"
+        }
+      },
+      "tipo": {
+        "id": 7,
+        "descricao": "Auxílio Brasil",
+        "descricaoDetalhada": "Auxílio Brasil"
+      },
+      "valor": 431351.0,
+      "quantidadeBeneficiados": 1032
+    },
+    {
+      "id": 3801532,
+      "dataReferencia": "2022-08-01",
+      "municipio": {
+        "codigoIBGE": "4114401",
+        "nomeIBGE": "MANGUEIRINHA",
+        "codigoRegiao": "4",
+        "nomeRegiao": "SUL",
+        "pais": "BRASIL",
+        "uf": {
+          "sigla": "PR",
+          "nome": "PARANÁ"
+        }
+      },
+      "tipo": {
+        "id": 7,
+        "descricao": "Auxílio Brasil",
+        "descricaoDetalhada": "Auxílio Brasil"
+      },
+      "valor": 446023.0,
+      "quantidadeBeneficiados": 1056
+    },
+    {
+      "id": 27701381,
+      "dataReferencia": "2022-09-01",
+      "municipio": {
+        "codigoIBGE": "4114401",
+        "nomeIBGE": "MANGUEIRINHA",
+        "codigoRegiao": "4",
+        "nomeRegiao": "SUL",
+        "pais": "BRASIL",
+        "uf": {
+          "sigla": "PR",
+          "nome": "PARANÁ"
+        }
+      },
+      "tipo": {
+        "id": 7,
+        "descricao": "Auxílio Brasil",
+        "descricaoDetalhada": "Auxílio Brasil"
+      },
+      "valor": 455246.0,
+      "quantidadeBeneficiados": 1073
+    },
+    {
+      "id": 7301192,
+      "dataReferencia": "2022-10-01",
+      "municipio": {
+        "codigoIBGE": "4114401",
+        "nomeIBGE": "MANGUEIRINHA",
+        "codigoRegiao": "4",
+        "nomeRegiao": "SUL",
+        "pais": "BRASIL",
+        "uf": {
+          "sigla": "PR",
+          "nome": "PARANÁ"
+        }
+      },
+      "tipo": {
+        "id": 7,
+        "descricao": "Auxílio Brasil",
+        "descricaoDetalhada": "Auxílio Brasil"
+      },
+      "valor": 440176.0,
+      "quantidadeBeneficiados": 1038
+    },
+    {
+      "id": 25401169,
+      "dataReferencia": "2022-11-01",
+      "municipio": {
+        "codigoIBGE": "4114401",
+        "nomeIBGE": "MANGUEIRINHA",
+        "codigoRegiao": "4",
+        "nomeRegiao": "SUL",
+        "pais": "BRASIL",
+        "uf": {
+          "sigla": "PR",
+          "nome": "PARANÁ"
+        }
+      },
+      "tipo": {
+        "id": 7,
+        "descricao": "Auxílio Brasil",
+        "descricaoDetalhada": "Auxílio Brasil"
+      },
+      "valor": 389244.0,
+      "quantidadeBeneficiados": 1048
+    },
+    {
+      "id": 7201229,
+      "dataReferencia": "2022-12-01",
+      "municipio": {
+        "codigoIBGE": "4114401",
+        "nomeIBGE": "MANGUEIRINHA",
+        "codigoRegiao": "4",
+        "nomeRegiao": "SUL",
+        "pais": "BRASIL",
+        "uf": {
+          "sigla": "PR",
+          "nome": "PARANÁ"
+        }
+      },
+      "tipo": {
+        "id": 7,
+        "descricao": "Auxílio Brasil",
+        "descricaoDetalhada": "Auxílio Brasil"
+      },
+      "valor": 385230.0,
+      "quantidadeBeneficiados": 1031
+    },
+    {
+      "id": 13601184,
+      "dataReferencia": "2023-01-01",
+      "municipio": {
+        "codigoIBGE": "4114401",
+        "nomeIBGE": "MANGUEIRINHA",
+        "codigoRegiao": "4",
+        "nomeRegiao": "SUL",
+        "pais": "BRASIL",
+        "uf": {
+          "sigla": "PR",
+          "nome": "PARANÁ"
+        }
+      },
+      "tipo": {
+        "id": 7,
+        "descricao": "Auxílio Brasil",
+        "descricaoDetalhada": "Auxílio Brasil"
+      },
+      "valor": 405575.0,
+      "quantidadeBeneficiados": 1053
+    },
+    {
+      "id": 3301332,
+      "dataReferencia": "2023-02-01",
+      "municipio": {
+        "codigoIBGE": "4114401",
+        "nomeIBGE": "MANGUEIRINHA",
+        "codigoRegiao": "4",
+        "nomeRegiao": "SUL",
+        "pais": "BRASIL",
+        "uf": {
+          "sigla": "PR",
+          "nome": "PARANÁ"
+        }
+      },
+      "tipo": {
+        "id": 7,
+        "descricao": "Auxílio Brasil",
+        "descricaoDetalhada": "Auxílio Brasil"
+      },
+      "valor": 389575.0,
+      "quantidadeBeneficiados": 1042
+    }
+  ]
