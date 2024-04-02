@@ -16,88 +16,48 @@ The following GCP resources were used:
 - **BigQuery:** The flagship of GCP; used mainly for warehousing (it can now be a data lake) and anlytics. For this project, it is used for storing the transformed data from Dataflow in tabular format and some analytics.
 - **Looker Studio:** Used for creating dashboards for our data.
 
-### 1. Choose 5 fundamental concepts of GCP Pub/Sub and describe them
+### 1. Choose 5 fundamental concepts of GCP BigQuery and describe them
 
-1. *Topic:*
-  - A topic is a named resource to which messages are sent by publishers and from which messages are pulled by subscribers.
-  - Publishers, which are responsible for producing messages, send them to specific topics.
-  - Topics serve as the channels through which messages are organized and distributed to interested subscribers.
-3. *Subscription:*
-  - A subscription represents the stream of messages from a single, specific topic, to be delivered to the subscribing application.
-  - Subscribers are the consumers that receive and process messages from subscriptions.
-  - Subscriptions are created within the context of a topic, and each subscription has its own acknowledgment state and message backlog.
-4. *Message:*
-  - A message is the unit of data transmitted between publishers and subscribers via Pub/Sub.
-  - Messages contain the payload, which is the actual data being transmitted, and optional metadata like attributes.
-  - The payload can be in any format, such as JSON or binary data, and can be up to 10 MB in size.
-5. *Acknowledgment:*
-  - Acknowledgment is the mechanism by which a subscriber informs Pub/Sub that it has successfully received and processed a message.
-  - Once a message is acknowledged, Pub/Sub considers it as delivered and removes it from the subscription's backlog.
-  - Subscribers have a configurable acknowledgment deadline, and if a message is not acknowledged within this deadline, Pub/Sub redelivers it to other subscribers.
-6. *Push and Pull Delivery:*
-  - Pub/Sub supports both push and pull mechanisms for delivering messages to subscribers.
-  - Push Delivery: In push mode, Pub/Sub delivers messages directly to an endpoint (e.g., a webhook) specified by the subscriber. This requires the subscriber to expose a public endpoint.
-  - Pull Delivery: In pull mode, subscribers explicitly request messages from Pub/Sub at their own pace. The subscriber controls when it pulls messages and acknowledges them.
+1. **Serverless Data Warehousing**: BigQuery is a serverless, fully managed data warehousing solution provided by Google Cloud Platform (GCP). Being serverless means that users don't need to provision or manage any infrastructure; instead, Google handles all aspects of scaling, performance optimization, and maintenance behind the scenes. This allows users to focus solely on analyzing their data without worrying about the underlying infrastructure.
 
-### 2. Describe the architecture of GCP Pub/Sub
+2. **Columnar Storage and Execution**: BigQuery utilizes a columnar storage format, where data is stored in columns rather than rows. This format is optimized for analytical queries, as it allows for efficient data compression and retrieval. Additionally, BigQuery's execution engine is designed to operate on columnar data, enabling fast query performance even when dealing with large datasets.
 
-Google Cloud Pub/Sub has a distributed architecture designed for reliable message delivery. Publishers send messages to topics, which are logical channels. The Pub/Sub service manages message storage, retrieval, and distribution. Subscribers, connected to topics through subscriptions, consume messages. Subscribers use pull or push mechanisms for retrieval and acknowledge successful message processing. Messages, the units of data, have payloads and optional metadata. This architecture ensures efficient and scalable asynchronous communication between components in a distributed system.
+3. **SQL-based Querying**: BigQuery supports standard SQL for querying and analyzing data. Users can write SQL queries to perform a wide range of operations, including filtering, aggregating, joining, and transforming data. The SQL dialect supported by BigQuery is ANSI SQL:2011 compliant, with some extensions and optimizations specific to BigQuery's features and capabilities.
 
-### 3. Present examples of Pub/Sub utilization on SQL and noSQL databases
+4. **Scalability and Performance**: BigQuery is built to handle petabyte-scale datasets and can execute complex queries across massive datasets with low latency. It achieves this scalability and performance through parallel execution, automatic query optimization, and distributed storage and processing. As query complexity or data volume increases, BigQuery automatically scales resources to ensure consistent performance.
 
-*Pub/Sub Utilization with SQL Database (e.g., Cloud SQL):*
+5. **Integration with Google Cloud Ecosystem**: BigQuery seamlessly integrates with other Google Cloud services, allowing users to ingest data from various sources, such as Google Cloud Storage, Google Cloud Pub/Sub, and Google Sheets. Additionally, BigQuery integrates with data visualization tools like Data Studio and BI platforms like Looker. This integration simplifies the process of data ingestion, transformation, analysis, and visualization within the Google Cloud ecosystem, enabling a cohesive and efficient data analytics workflow.
 
-Consider a scenario where you have a web application relying on a SQL database, such as Cloud SQL, to store user profiles. Users want real-time updates whenever there's a change to their profile.
+### 2. Describe the architecture of GCP BigQuery
 
-In this case, you can implement a change event trigger on the SQL database to detect updates to the user profile table. This trigger acts as a publisher, and whenever a user profile is updated, it publishes a message to a Pub/Sub topic, let's call it "user_profile_updates." On the application side, you can have a subscriber service that listens to this topic. When a message is received, the user interface is updated in real-time, reflecting the changes made to the user profile. This enables users to receive immediate updates without the need for constant manual refreshing.
+Google Cloud Platform's BigQuery architecture consists of two main components: storage and compute.
+The storage layer utilizes Google's distributed storage system, storing data in a columnar format. This format optimizes query performance by enabling efficient data compression and retrieval. 
+The compute layer comprises a massively parallel processing engine that executes SQL queries across distributed resources. It dynamically allocates resources based on query complexity and dataset size, ensuring optimal performance and resource utilization. 
+BigQuery's architecture is designed for scalability, enabling it to handle large datasets and execute complex queries efficiently. It integrates seamlessly with other Google Cloud services and provides robust security features to protect data integrity.
 
-*Pub/Sub Utilization with NoSQL Database (e.g., Cloud Firestore):*
+### 3. Present examples of BigQuery utilization on SQL and NoSQL databases
 
-Now, let's consider a collaborative document editing application using a NoSQL database like Cloud Firestore. In this scenario, users want real-time collaboration updates as they edit a shared document.
+SQL Database Example:
+In a SQL database scenario, such as MySQL or PostgreSQL, where data is structured into tables with rows and columns, you can export your data into BigQuery for analysis. BigQuery allows you to run SQL queries directly on this structured data, enabling you to perform complex analytics and generate insights. For instance, you could analyze sales data to identify top-selling products or track customer behavior over time.
 
-The integration involves setting up a NoSQL database to store the collaborative document. For real-time updates, you can create a Pub/Sub topic, say "document_updates." A service acts as a publisher, and whenever a user makes changes to the document, it publishes a message to this topic. On the application side, a subscriber service is implemented to listen to the "document_updates" topic. As messages are received, the collaborative document is updated in real-time. This ensures that all users involved in the collaboration see live changes as they occur, fostering a seamless and responsive collaborative editing experience.
+NoSQL Database Example:
+In a NoSQL database scenario, such as MongoDB or Firebase Firestore, where data is stored in a more flexible and schema-less format, you can export your data into BigQuery for analysis. BigQuery supports semi-structured data like JSON, allowing you to run SQL-like queries on this data. For example, you could analyze user activity logs to understand user engagement patterns or monitor application performance metrics.
 
-### 4. Describe the best advantages of using of GCP Pub/Sub
+In both cases, BigQuery provides a powerful and scalable platform for analyzing data from SQL and NoSQL databases, helping organizations derive valuable insights and make data-driven decisions.
 
-1. *Asynchronous Communication:*
+### 4. Describe the best advantages of using of GCP BigQuery
 
-Pub/Sub facilitates asynchronous communication between independent components of a system. This enables the decoupling of producers (publishers) and consumers (subscribers), allowing them to operate independently and asynchronously.
+1. **Scalability**: BigQuery is built to handle massive datasets, scaling seamlessly to accommodate petabytes of data. Its distributed architecture and serverless nature ensure that users can run queries of any size without worrying about provisioning or managing infrastructure. This scalability makes it suitable for organizations of all sizes, from startups to large enterprises.
 
-2. *Scalability:*
+2. **Performance**: BigQuery offers fast query performance, even on large datasets, thanks to its columnar storage format and distributed processing engine. It can execute complex analytical queries in seconds or minutes, enabling users to derive insights from their data quickly. Additionally, BigQuery automatically optimizes query execution and resource allocation to maximize performance and minimize latency.
 
-Pub/Sub is designed to scale horizontally, accommodating varying workloads and handling large volumes of messages with ease. This scalability is crucial for applications with unpredictable or fluctuating workloads.
+3. **Ease of Use**: BigQuery is designed to be user-friendly, with a familiar SQL interface that allows users to write and execute queries without the need for specialized skills or training. Its integration with other Google Cloud services, such as Google Cloud Storage and Google Data Studio, further enhances usability, enabling seamless data ingestion, transformation, and visualization workflows.
 
-3. *Reliability and Durability:*
+4. **Cost-effectiveness**: BigQuery offers a pay-as-you-go pricing model, where users only pay for the storage and processing resources they consume. There are no upfront costs or long-term commitments, making it cost-effective for organizations to analyze large volumes of data without incurring unnecessary expenses. Additionally, BigQuery's automatic scaling and resource optimization help minimize costs by ensuring efficient resource utilization.
 
-Google Cloud Pub/Sub is built on Google's highly reliable and durable infrastructure. It ensures message persistence and delivery, even in the face of system failures or outages. Messages are retained until they are acknowledged by subscribers, providing durability.
+5. **Security and Compliance**: BigQuery provides robust security features to protect data privacy and ensure compliance with regulatory requirements. It offers fine-grained access controls, encryption at rest and in transit, and audit logging capabilities to safeguard sensitive data. Additionally, BigQuery undergoes regular security audits and certifications to maintain the highest standards of security and compliance.
 
-4. *Global Availability:*
-
-Pub/Sub is a globally distributed service, allowing you to create topics and subscriptions in multiple regions. This global availability enhances redundancy and fault tolerance, ensuring reliable message delivery across different geographical locations.
-
-5. *Exactly-Once Delivery:*
-
-Pub/Sub supports an "at-least-once" message delivery guarantee, which ensures that a message is delivered to a subscriber at least once. Additionally, its acknowledgment mechanism helps achieve "exactly-once" delivery semantics when subscribers properly acknowledge message processing.
-
-6. *Real-Time Data Processing:*
-
-Pub/Sub supports both push and pull mechanisms, making it suitable for real-time data processing scenarios. Subscribers can receive messages as soon as they are published, enabling quick and responsive systems.
-
-7. *Integration with Other GCP Services:*
-
-Pub/Sub seamlessly integrates with other Google Cloud Platform services, such as Cloud Functions, Dataflow, and BigQuery. This facilitates the building of end-to-end data pipelines and event-driven architectures.
-
-8. *Security and Access Controls:*
-
-Pub/Sub provides robust security features, including identity and access management (IAM) controls. This ensures that only authorized entities can publish or subscribe to topics and receive messages.
-
-9. *Flexible Message Routing:*
-
-Topics allow for flexible message routing, enabling publishers to categorize messages based on topics. Subscribers can then selectively subscribe to specific topics, ensuring that they only receive messages relevant to their needs.
-
-10. *Cost-Efficiency:*
-
-Google Cloud Pub/Sub offers a pay-as-you-go pricing model, allowing you to pay for the resources you consume. It eliminates the need for upfront investments in infrastructure and provides cost efficiency, especially for variable workloads.
+6. **Integration with Google Ecosystem**: BigQuery seamlessly integrates with other Google Cloud services and tools, enabling organizations to leverage the full power of the Google ecosystem for their data analytics workflows. It integrates with services like Google Cloud Storage, Google Data Studio, Google Cloud Pub/Sub, and more, allowing users to ingest, process, analyze, and visualize data in a cohesive and efficient manner.
 
 ### 5. What is a data pipeline?
 
