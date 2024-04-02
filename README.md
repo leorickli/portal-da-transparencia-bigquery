@@ -1,4 +1,4 @@
-# portal-da-transparencia-streaming
+# portal-da-transparencia-bigquery
 
 <img width="706" alt="Screenshot 2024-03-13 at 23 47 15" src="https://github.com/leorickli/portal-da-transparencia-streaming/assets/106999054/9756a9b2-5f8b-485f-8fbd-0af2ace8867f">
 
