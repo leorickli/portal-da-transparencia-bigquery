@@ -2,7 +2,7 @@
 
 <img width="706" alt="Screenshot 2024-03-13 at 23 47 15" src="https://github.com/leorickli/portal-da-transparencia-streaming/assets/106999054/9756a9b2-5f8b-485f-8fbd-0af2ace8867f">
 
-This project explores the Google Cloud Platform's resources to create a streaming pipeline to process real-time data from the Portal da Transparência API. Actually, there is no real-time data provided by this API. We generate the real-time data through a Python script.
+This project explores the Google Cloud Platform's resources to create a streaming pipeline to process real-time data from the Portal da Transparência (Welfare Programs) API. Actually, there is no real-time data provided by this API. We generate the real-time data through a Python script.
 
 *The Transparency Portal (Portal da Transparência) is a digital platform designed to provide detailed information about public entities' expenditures and financial management. Its primary goal is to promote transparency in public administration, allowing citizens, journalists, researchers, and other interested parties to access and analyze data related to revenues, expenses, contracts, agreements, and salaries of public servants, among other aspects.*
 
